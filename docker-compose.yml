@@ -1,0 +1,41 @@
+services:  
+  viewer:
+    image: viewer
+    platform: linux/amd64
+    hostname: essential-viewer
+    build: 
+      context: viewer
+    volumes:
+      - ./EssentialAM/essential_viewer:/usr/local/tomcat/webapps/essential_viewer
+    ports:
+      - 80:8080
+      - 8080:8080
+      - 9090:9090
+    env_file:
+      - ./env_file.env
+
+  protege:
+    image: protege
+    platform: linux/amd64
+    hostname: essential-protege
+    build: 
+      context: protege
+    volumes:
+      - ./EssentialAM/Repository:/opt/EssentialAM/Repository
+      - ./EssentialAM/server:/opt/EssentialAM/server
+    ports:
+      - 2222:2222
+      - 5200:5200
+      - 5100:5100
+
+  db:
+    image: mysql:9.0
+    hostname: essential-db
+    env_file:
+      - ./env_file.env
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./initdb:/docker-entrypoint-initdb.d/
+    ports:
+      - "3306:3306"
+

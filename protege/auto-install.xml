@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+    <com.izforge.izpack.panels.htmlhello.HTMLHelloPanel id="hellopanel"/>
+    <com.izforge.izpack.panels.htmlinfo.HTMLInfoPanel id="infopanel"/>
+    <com.izforge.izpack.panels.licence.LicencePanel id="licencepanel"/>
+    <com.izforge.izpack.panels.imgpacks.ImgPacksPanel id="packspanel">
+        <pack index="0" name="Update Scripts Upgrade" selected="true"/>
+        <pack index="1" name="Widgets" selected="true"/>
+        <pack index="2" name="Server" selected="true"/>
+        <pack index="3" name="Essential Server Service" selected="false"/>
+        <pack index="4" name="Integration Tab" selected="true"/>
+        <pack index="5" name="Sample Integration Data" selected="false"/>
+        <pack index="6" name="Snapshot Tab" selected="true"/>
+        <pack index="7" name="Update Tab" selected="true"/>
+    </com.izforge.izpack.panels.imgpacks.ImgPacksPanel>
+    <com.izforge.izpack.panels.userinput.UserInputPanel id="Plugins">
+        <!-- <entry key="PROTEGE_HOME" value="/Users/terryaguiar/Documents/Containers/Essential/util/standalone_essential_v61910/protege"/> -->
+        <entry key="PROTEGE_HOME" value="/opt/Protege_3.5/"/>
+    </com.izforge.izpack.panels.userinput.UserInputPanel>
+    <com.izforge.izpack.panels.target.TargetPanel id="NoRepository">
+        <!-- <installpath>/Users/terryaguiar/Documents/Containers/Essential/essential/essential/EssentialAM</installpath> -->
+        <installpath>/opt/EssentialAM</installpath>
+    </com.izforge.izpack.panels.target.TargetPanel>
+    <com.izforge.izpack.panels.userinput.UserInputPanel id="ServerThings">
+        <!-- <entry key="SERVER_HOME" value="/Users/terryaguiar/Documents/Containers/Essential/util/standalone_essential_v61910/protege/examples/server"/> -->
+        <entry key="SERVER_HOME" value="/opt/EssentialAM/Repository"/>
+    </com.izforge.izpack.panels.userinput.UserInputPanel>
+    <com.izforge.izpack.panels.summary.SummaryPanel id="summarypanel"/>
+    <com.izforge.izpack.panels.install.InstallPanel id="installpanel"/>
+    <com.izforge.izpack.panels.finish.FinishPanel id="finishpanel"/>
+</AutomatedInstallation>
