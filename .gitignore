@@ -9,3 +9,5 @@ env_file.env
 secret.txt
 data/
 execution.log
+EssentialAM/
+viewer/downloads/
